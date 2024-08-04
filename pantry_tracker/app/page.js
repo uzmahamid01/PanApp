@@ -146,6 +146,14 @@ export default function Home() {
     }
   };
 
+  const renderImage = (src) => {
+    if (src.startsWith('data:')) {
+      return <img src={src} alt="Item Image" style={{ maxWidth: '100px' }} />;
+    } else {
+      return <Image src={src} alt="Item Image" width={100} height={100} objectFit="contain" />;
+    }
+  };
+
   const handleUpdateItem = async (id) => {
     const itemToEdit = items.find(item => item.id === id);
     if (itemToEdit) {
@@ -383,7 +391,7 @@ export default function Home() {
 
         <Divider sx={{ marginY: 2 }} />
 
-        <Typography variant="h6">What&#39;s in My Pantry</Typography>
+        <Typography variant="h6">What's in My Pantry</Typography>
         <Box sx={{ marginTop: 2, display: 'flex', gap: 2 }}>
           <div style={{ flex: 1 }}>
             <TextField
@@ -445,7 +453,7 @@ export default function Home() {
               {filteredItems.map((item) => (
                 <TableRow key={item.id}>
                   <TableCell>{item.name}</TableCell>
-                  <TableCell><Image src={item.image} alt={item.name} style={{ maxWidth: '100px' }} /></TableCell>
+                  <TableCell>{renderImage(item.image)}</TableCell>
                   <TableCell>{item.category}</TableCell>
                   <TableCell>{item.quantity}</TableCell>
                   <TableCell>{item.expirationDate}</TableCell>
