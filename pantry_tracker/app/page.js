@@ -385,7 +385,7 @@ export default function Home() {
               </Button>
             </Box> */}
 
-            <Typography variant="subtitle1" sx={{ marginBottom: 1, fontWeight: 'bold' }}>Image URL</Typography>
+            <Typography variant="subtitle1" sx={{ marginBottom: 1, marginTop: 1, fontWeight: 'bold' }}>Image URL</Typography>
             <TextField
               id="image-url"
               fullWidth
