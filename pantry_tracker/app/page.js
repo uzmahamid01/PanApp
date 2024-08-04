@@ -262,24 +262,35 @@ export default function Home() {
             marginBottom: 2 
           }}
         >
-          <Typography variant="h5">Welcome to the Pantry App</Typography>
-          <Box>
-            <a
-              href=""
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ display: 'flex', alignItems: 'center' }}
+          <Typography
+            variant="h5"
+            sx={{ mb: 2, mt: 4 }} // Adjust 'mt' value for top margin
+          >
+            Pantry Tracker 
+          </Typography>
+
+          <Box sx={{ display: 'flex', alignItems: 'center', gap: 5, mt: 2 }}>
+            <Typography
+              variant="body1"
+              sx={{ 
+                fontWeight: 'bold', 
+                color: 'text.secondary' 
+              }}
             >
-              By
-              <Image
-                src="/darklogo.png"
-                alt="Vercel Logo"
-                width={100}
-                height={90}
-                priority
-              />
-            </a>
+              By Uzma
+            </Typography>
+            {/* Uncomment this if you want to include the image */}
+            {/* <Image
+              src="/darklogo.png"
+              alt="Logo"
+              width={100}
+              height={90}
+              priority
+              style={{ borderRadius: '8px', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)' }}
+            /> */}
           </Box>
+
+
         </Box>
         <Box
             sx={{
@@ -305,7 +316,7 @@ export default function Home() {
                 textShadow: '2px 2px 6px rgba(0, 0, 0, 0.5)' 
               }}
             >
-              Pantry App
+              PantryPal
             </Typography>
           </Box>
 
