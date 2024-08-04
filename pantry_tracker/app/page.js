@@ -391,7 +391,7 @@ export default function Home() {
 
         <Divider sx={{ marginY: 2 }} />
 
-        <Typography variant="h6">What's in My Pantry</Typography>
+        <Typography variant="h6">What&#39;s in My Pantry</Typography>
         <Box sx={{ marginTop: 2, display: 'flex', gap: 2 }}>
           <div style={{ flex: 1 }}>
             <TextField
