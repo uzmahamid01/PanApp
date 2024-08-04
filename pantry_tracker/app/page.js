@@ -375,7 +375,7 @@ export default function Home() {
             {/* <Button variant="contained" component="label" onClick={handleOpenImageDialog}>
                 Upload Image
             </Button> */}
-            <Box sx={{ display: 'flex', alignItems: 'center', mb: 2, mt: 2 }}>
+            {/* <Box sx={{ display: 'flex', alignItems: 'center', mb: 2, mt: 2 }}>
               <Button variant="contained" component="label" onClick={handleOpenImageDialog} startIcon={<FileUploadIcon />}>
                 Upload Image
                 <input type="file" hidden onChange={handleImageUpload} />
@@ -383,9 +383,9 @@ export default function Home() {
                   <CameraAltIcon />
                 </IconButton>
               </Button>
-            </Box>
+            </Box> */}
 
-            {/* <Typography variant="subtitle1" sx={{ marginBottom: 1, fontWeight: 'bold' }}>Image URL</Typography>
+            <Typography variant="subtitle1" sx={{ marginBottom: 1, fontWeight: 'bold' }}>Image URL</Typography>
             <TextField
               id="image-url"
               fullWidth
@@ -402,7 +402,7 @@ export default function Home() {
                   </InputAdornment>
                 )
               }}
-            /> */}
+            />
             <Button variant="contained" sx={{ marginTop: 1 }} onClick={editingItem ? handleSaveUpdate : handleAddItem}>
               {editingItem ? 'Save Changes' : 'Add'}
             </Button>
