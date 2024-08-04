@@ -37,6 +37,14 @@ export default function Home() {
 
   const handleAddItem = async () => {
     if (item.trim() && quantity.trim() && category.trim() && expirationDate.trim()) {
+      const currentDate = new Date();
+      const inputExpirationDate = new Date(expirationDate);
+  
+      if (inputExpirationDate < currentDate) {
+        alert('Error: The expiration date cannot be in the past.');
+        return; // Stop further execution
+      }
+  
       try {
         const querySnapshot = await getDocs(collection(db, 'pantryItems'));
         const itemsList = querySnapshot.docs.map(doc => ({
@@ -95,6 +103,7 @@ export default function Home() {
       alert('Please fill out all fields.');
     }
   };
+  
 
   const fetchItems = async () => {
     try {
