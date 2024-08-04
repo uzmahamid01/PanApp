@@ -383,7 +383,7 @@ export default function Home() {
 
         <Divider sx={{ marginY: 2 }} />
 
-        <Typography variant="h6">What's in My Pantry</Typography>
+        <Typography variant="h6">What&#39;s in My Pantry</Typography>
         <Box sx={{ marginTop: 2, display: 'flex', gap: 2 }}>
           <div style={{ flex: 1 }}>
             <TextField
@@ -445,7 +445,7 @@ export default function Home() {
               {filteredItems.map((item) => (
                 <TableRow key={item.id}>
                   <TableCell>{item.name}</TableCell>
-                  <TableCell><img src={item.image} alt={item.name} style={{ maxWidth: '100px' }} /></TableCell>
+                  <TableCell><Image src={item.image} alt={item.name} style={{ maxWidth: '100px' }} /></TableCell>
                   <TableCell>{item.category}</TableCell>
                   <TableCell>{item.quantity}</TableCell>
                   <TableCell>{item.expirationDate}</TableCell>
@@ -504,7 +504,7 @@ export default function Home() {
             {capturedImage && (
               <Box sx={{ marginTop: 2 }}>
                 <Typography variant="subtitle1">Captured Image</Typography>
-                <img src={capturedImage} alt="Captured" style={{ maxWidth: '100%' }} />
+                <Image src={capturedImage} alt="Captured" style={{ maxWidth: '100%' }} />
               </Box>
             )}
             {showCamera && ( 
